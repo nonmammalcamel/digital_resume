@@ -182,9 +182,9 @@ export const siteContent = {
     ]
   },
   workSamples: {
-    title: 'Academic Legal Work Samples',
+    title: 'Legal Work Samples',
     intro:
-      'Here are some work samples I completed during the Cal State LA Paralegal Program. Please click on any of them to see examples of my legal writing, research, analysis, and document preparation skills.',
+      'Here are some work samples I completed during the CSULA paralegal program. Please click on any of them to see examples of my legal writing, research, analysis, and document preparation skills.',
     items: [
       {
         id: 'legal-memorandum',
