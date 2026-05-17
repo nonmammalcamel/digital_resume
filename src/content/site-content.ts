@@ -182,7 +182,8 @@ export const siteContent = {
     items: [
       {
         id: 'legal-memorandum',
-        title: 'Legal Memorandum'
+        title: 'Legal Memorandum',
+        href: '/work-samples/legal-memorandum.pdf'
       },
       {
         id: 'complaint',

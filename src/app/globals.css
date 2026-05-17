@@ -457,6 +457,15 @@ main {
   color: inherit;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
+}
+
+.document-tile:disabled {
+  cursor: not-allowed;
+}
+
+.document-tile:disabled .document-icon {
+  opacity: 0.42;
 }
 
 .document-icon {
@@ -541,8 +550,8 @@ main {
   color: var(--document-text);
 }
 
-.document-tile:hover .document-icon,
-.document-tile:focus-visible .document-icon {
+.document-tile:not(:disabled):hover .document-icon,
+.document-tile:not(:disabled):focus-visible .document-icon {
   transform: translateY(-0.16rem);
   border-color: var(--amber);
   box-shadow: 0 0 0 1px var(--amber);
@@ -719,8 +728,8 @@ main {
     transition: none;
   }
 
-  .document-tile:hover .document-icon,
-  .document-tile:focus-visible .document-icon {
+  .document-tile:not(:disabled):hover .document-icon,
+  .document-tile:not(:disabled):focus-visible .document-icon {
     transform: none;
   }
 }
