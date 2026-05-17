@@ -16,7 +16,7 @@ function renderParagraphText(paragraph: string, shouldUnderlineFinalYou: boolean
             <span key={`${part}-${partIndex}`}>
               {part}
               {partIndex < parts.length - 1 ? (
-                <strong style={{ color: 'var(--amber)' }}>Travis</strong>
+                <strong style={{ color: 'var(--fg)' }}>Travis</strong>
               ) : null}
             </span>
           ))}
@@ -65,7 +65,7 @@ function renderNumberedParagraph(paragraph: string) {
 
   return (
     <>
-      <span style={{ color: 'var(--amber)', fontWeight: 700 }}>
+      <span style={{ color: 'var(--fg)', fontWeight: 700 }}>
         {numberMatch[1]}
       </span>{' '}
       {numberMatch[2]}
