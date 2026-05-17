@@ -1,0 +1,94 @@
+.contactPanel {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(101, 168, 106, 0.06);
+}
+
+.contactIntro {
+  max-width: 64ch;
+  color: var(--body);
+  font-size: clamp(0.84rem, 1.08vw, 0.9rem);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.contactItem {
+  min-width: 0;
+}
+
+.contactCard {
+  display: grid;
+  align-content: space-between;
+  gap: 0.75rem;
+  min-height: 6.25rem;
+  padding: 0.85rem;
+  border: 1px solid var(--line-soft);
+  background: var(--bg);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.contactCard:hover,
+.contactCard:focus-visible {
+  transform: translateY(-0.14rem);
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px var(--amber);
+}
+
+.contactCard:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 0.25rem;
+}
+
+.contactLabel {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contactValue {
+  color: var(--body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .contactGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactCard {
+    transition: none;
+  }
+
+  .contactCard:hover,
+  .contactCard:focus-visible {
+    transform: none;
+  }
+}
