@@ -31,6 +31,7 @@ export default function HomePage() {
         <CertificationsSection
           title={siteContent.certifications.title}
           intro={siteContent.certifications.intro}
+          featured={siteContent.certifications.featured}
           categories={siteContent.certifications.categories}
         />
 

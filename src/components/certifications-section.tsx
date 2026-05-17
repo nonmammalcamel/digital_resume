@@ -1,3 +1,10 @@
+type FeaturedCertification = {
+  id: string;
+  title: string;
+  issuer: string;
+  href: string;
+};
+
 type CertificationItem = {
   id: string;
   name: string;
@@ -15,16 +22,22 @@ type CertificationCategory = {
 type CertificationsSectionProps = {
   title: string;
   intro: string;
+  featured?: FeaturedCertification;
   categories: readonly CertificationCategory[];
 };
 
 export function CertificationsSection({
   title,
   intro,
+  featured,
   categories
 }: CertificationsSectionProps) {
   return (
-    <section className="content-section" aria-labelledby="certifications-title">
+    <section
+      id="certifications"
+      className="content-section"
+      aria-labelledby="certifications-title"
+    >
       <div className="section-label">03</div>
 
       <div className="section-body">
@@ -35,6 +48,24 @@ export function CertificationsSection({
         <p className="section-intro">{intro}</p>
 
         <div className="certification-groups">
+          {featured ? (
+            <a
+              className="certification-feature-summary"
+              href={featured.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Open ${featured.title}`}
+            >
+              <span className="certification-feature-marker" aria-hidden="true" />
+              <span>
+                {featured.title}
+                <span className="certification-feature-issuer">
+                  {featured.issuer}
+                </span>
+              </span>
+            </a>
+          ) : null}
+
           {categories.map((category) => (
             <details className="certification-category" key={category.id}>
               <summary className="certification-summary">
