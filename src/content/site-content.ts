@@ -187,7 +187,8 @@ export const siteContent = {
       },
       {
         id: 'complaint',
-        title: 'Complaint'
+        title: 'Complaint',
+        href: '/work-samples/complaint.pdf'
       },
       {
         id: 'deposition-transcript',
