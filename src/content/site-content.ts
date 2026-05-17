@@ -197,7 +197,8 @@ export const siteContent = {
       },
       {
         id: 'contract',
-        title: 'Contract'
+        title: 'Contract',
+        href: '/work-samples/contract.pdf'
       }
     ]
   },
