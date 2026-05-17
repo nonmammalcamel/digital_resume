@@ -89,7 +89,13 @@ export const siteContent = {
   certifications: {
     title: 'Certifications',
     intro:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer vitae justo eget magna fermentum iaculis eu non diam phasellus.',
+      'Formal training and legal-technology credentials supporting my transition into paralegal and legal support work.',
+    featured: {
+      id: 'cal-state-la-paralegal',
+      title: 'Paralegal Certificate',
+      issuer: 'Cal State LA',
+      href: '/certifications/paralegal-certificate.pdf'
+    },
     categories: [
       {
         id: 'ediscovery',
@@ -206,11 +212,6 @@ export const siteContent = {
     title: 'Education',
     items: [
       {
-        id: 'cal-state-la-paralegal',
-        credential: 'Paralegal Certification',
-        institution: 'Cal State LA'
-      },
-      {
         id: 'evergreen-math',
         credential: 'Bachelor of Science in Mathematics',
         institution: 'The Evergreen State College'
@@ -271,13 +272,13 @@ export const siteContent = {
         id: 'contact-email',
         label: 'Email',
         value: 'thelegaltraviskirby@outlook.com',
-        href: 'mailto:your.email@example.com'
+        href: 'mailto:thelegaltraviskirby@outlook.com'
       },
       {
         id: 'contact-phone',
         label: 'Phone',
         value: '(510) 301-9265',
-        href: 'tel:+15550000000'
+        href: 'tel:+15103019265'
       },
       {
         id: 'contact-location',
