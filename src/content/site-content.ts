@@ -192,7 +192,8 @@ export const siteContent = {
       },
       {
         id: 'deposition-transcript',
-        title: 'Deposition Transcript'
+        title: 'Deposition Transcript',
+        href: '/work-samples/deposition-transcript.pdf'
       },
       {
         id: 'contract',
