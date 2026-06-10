@@ -38,8 +38,8 @@ export const siteContent = {
     paragraphs: [
       'Welcome to my digital resume! I’m Travis.',
       'I recently completed my paralegal certification at CSULA, and once I began my job hunt in the legal field, I quickly decided I should build this website for two reasons:',
-      '1. I don’t think the dominant job board culture of Indeed or LinkedIn is conducive to anyone’s ability to show their skills or their personality.',
-      '2. Because paralegal/legal tech work is a professional pivot for me, the conventional one-page resume falls short of showing the excitement and aptitude I have for law. This site can show you more, and do it succinctly. It’s also a skill display in and of itself.',
+      '1. I don’t think the dominant job board culture of LinkedIn is conducive to showing anyone’s abilities, accomplishments, or personality; and…',
+      '2. The same culture only lets HR evaluate candidates by keywords and longevity—not talent or ambition.',
       'After all, if I’ve dedicated the effort and energy to build this site just to sell myself to employers... imagine the level of focused, directed work I could do for you.'
     ]
   },
