@@ -463,13 +463,14 @@ main {
   place-items: center;
   width: 2rem;
   height: 2rem;
+  overflow: visible;
   border-left: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--bg);
   color: var(--amber);
-  font-size: 1.35rem;
+  font-size: 1.9rem;
   font-weight: 800;
-  line-height: 1;
+  line-height: 0.8;
   text-decoration: none;
 }
 
@@ -877,7 +878,7 @@ a.document-link-corner:focus-visible {
   .document-link-corner {
     width: 1.85rem;
     height: 1.85rem;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 
   .certification-nested-document-grid {
