@@ -122,30 +122,37 @@ export const siteContent = {
           {
             id: 'blue-team-junior-analyst',
             title: 'Blue Team Junior Analyst',
+            href: '/certs/blue-team-junior-analyst.pdf',
             children: [
               {
                 id: 'intro-digital-forensics',
-                title: 'Intro to Digital Forensics'
+                title: 'Intro to Digital Forensics',
+                href: '/certs/blue-team-digitalforensics.pdf'
               },
               {
                 id: 'intro-osint',
-                title: 'Intro to OSINT'
+                title: 'Intro to OSINT',
+                href: '/certs/blue-team-OSINT.pdf'
               },
               {
                 id: 'intro-dark-web',
-                title: 'Intro to the Dark Web'
+                title: 'Intro to the Dark Web',
+                href: '/certs/blue-team-darkweb.pdf'
               },
               {
                 id: 'intro-network-analysis',
-                title: 'Intro to Network Analysis'
+                title: 'Intro to Network Analysis',
+                href: '/certs/blue-team-networkanalysis.pdf'
               },
               {
                 id: 'intro-threat-hunting',
-                title: 'Intro to Threat Hunting'
+                title: 'Intro to Threat Hunting',
+                href: '/certs/blue-team-threathunting.pdf'
               },
               {
                 id: 'intro-vulnerability-management',
-                title: 'Intro to Vulnerability Management'
+                title: 'Intro to Vulnerability Management',
+                href: '/certs/blue-team-vulman.pdf'
               }
             ]
           },

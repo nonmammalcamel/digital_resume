@@ -85,6 +85,19 @@ function CertificationDocumentDropdown({ item }: { item: CertificationItem }) {
         aria-label={`Expand ${item.title} certification group`}
       >
         <DocumentIcon title={item.title} showToggle />
+
+        {item.href ? (
+          <a
+            className="document-link-corner"
+            href={item.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${item.title} PDF`}
+            title={`Open ${item.title} PDF`}
+          >
+            ↗
+          </a>
+        ) : null}
       </summary>
 
       <div className="certification-nested-document-grid">
