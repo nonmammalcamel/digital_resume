@@ -13,7 +13,11 @@ type ExperienceSectionProps = {
 
 export function ExperienceSection({ title, items }: ExperienceSectionProps) {
   return (
-    <section className="content-section" aria-labelledby="experience-title">
+    <section
+      id="experience"
+      className="content-section"
+      aria-labelledby="experience-title"
+    >
       <div className="section-label">02</div>
 
       <div className="section-body">

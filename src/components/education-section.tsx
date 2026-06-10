@@ -11,7 +11,11 @@ type EducationSectionProps = {
 
 export function EducationSection({ title, items }: EducationSectionProps) {
   return (
-    <section className="content-section" aria-labelledby="education-title">
+    <section
+      id="education"
+      className="content-section"
+      aria-labelledby="education-title"
+    >
       <div className="section-label">05</div>
 
       <div className="section-body">

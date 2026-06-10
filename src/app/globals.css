@@ -10,7 +10,7 @@ html[data-theme='ink'] {
   --amber-soft: #9a762f;
   --amber-dim: #33260f;
   --content-width: 960px;
-  --header-height: 10rem;
+  --header-height: 12rem;
   --font-mono:
     SFMono-Regular,
     Menlo,
@@ -79,7 +79,7 @@ main {
   left: 50%;
   z-index: 20;
   width: min(100%, var(--content-width));
-  padding: 3rem 1.25rem 0;
+  padding: 2rem 1.25rem 0;
   background: var(--bg);
   transform: translateX(-50%);
 }
@@ -161,7 +161,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem 0.85rem;
-  padding-top: 0.45rem;
+  padding-bottom: 0.35rem;
   font-size: 0.79rem;
   font-weight: 700;
   line-height: 1.2;
@@ -723,11 +723,11 @@ main {
 @media (max-width: 640px) {
   :root,
   html[data-theme='ink'] {
-    --header-height: 8.75rem;
+    --header-height: 10.5rem;
   }
 
   .hero {
-    padding-top: 2.25rem;
+    padding-top: 1.5rem;
   }
 
   .hero-role {

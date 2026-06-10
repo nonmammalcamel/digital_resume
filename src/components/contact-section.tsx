@@ -13,7 +13,11 @@ type ContactSectionProps = {
 
 export function ContactSection({ title, intro, items }: ContactSectionProps) {
   return (
-    <section className="content-section" aria-labelledby="contact-title">
+    <section
+      id="contact"
+      className="content-section"
+      aria-labelledby="contact-title"
+    >
       <div className="section-label">07</div>
 
       <div className="section-body">
