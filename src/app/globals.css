@@ -473,16 +473,21 @@ main {
   text-decoration: none;
 }
 
-.document-link-corner:hover,
-.document-link-corner:focus-visible {
+a.document-link-corner:hover,
+a.document-link-corner:focus-visible {
   color: var(--body);
   border-color: var(--amber);
   box-shadow: 0 0 0 1px var(--amber);
 }
 
-.document-link-corner:focus-visible {
+a.document-link-corner:focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 0.2rem;
+}
+
+.document-link-corner-disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
 }
 
 .certification-nested-document-grid {

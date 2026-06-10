@@ -97,7 +97,15 @@ function CertificationDocumentDropdown({ item }: { item: CertificationItem }) {
           >
             ↗
           </a>
-        ) : null}
+        ) : (
+          <span
+            className="document-link-corner document-link-corner-disabled"
+            aria-hidden="true"
+            title={`${item.title} PDF coming soon`}
+          >
+            ↗
+          </span>
+        )}
       </summary>
 
       <div className="certification-nested-document-grid">
