@@ -466,8 +466,8 @@ main {
   border-left: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--bg);
-  color: var(--fg);
-  font-size: 0.9rem;
+  color: var(--amber);
+  font-size: 1.35rem;
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
@@ -475,7 +475,7 @@ main {
 
 .document-link-corner:hover,
 .document-link-corner:focus-visible {
-  color: var(--amber);
+  color: var(--body);
   border-color: var(--amber);
   box-shadow: 0 0 0 1px var(--amber);
 }
@@ -873,6 +873,7 @@ main {
   .document-link-corner {
     width: 1.85rem;
     height: 1.85rem;
+    font-size: 1.25rem;
   }
 
   .certification-nested-document-grid {
