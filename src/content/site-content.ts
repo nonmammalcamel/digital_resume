@@ -39,7 +39,7 @@ export const siteContent = {
       'Welcome to my digital resume! I’m Travis.',
       'I recently completed my paralegal certification at CSULA, and once I began my job hunt in the legal field, I quickly decided I should build this website for two reasons:',
       '1. I don’t think the dominant job board culture of LinkedIn is conducive to showing anyone’s abilities, accomplishments, or personality; and…',
-      '2. The same culture only lets HR evaluate candidates by keywords and longevity—not talent or ambition.',
+      '2. The same culture only lets HR evaluate candidates by keywords and longevity--not talent or ambition.',
       'After all, if I’ve dedicated the effort and energy to build this site just to sell myself to employers... imagine the level of focused, directed work I could do for you.'
     ]
   },

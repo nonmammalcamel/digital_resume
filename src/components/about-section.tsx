@@ -9,22 +9,6 @@ function renderParagraphText(paragraph: string, shouldUnderlineFinalYou: boolean
   return lines.map((line, index) => {
     const isLastLine = index === lines.length - 1;
 
-    if (line.includes('Travis')) {
-      return (
-        <span key={`${line}-${index}`}>
-          {line.split('Travis').map((part, partIndex, parts) => (
-            <span key={`${part}-${partIndex}`}>
-              {part}
-              {partIndex < parts.length - 1 ? (
-                <strong style={{ color: 'var(--muted)' }}>Travis</strong>
-              ) : null}
-            </span>
-          ))}
-          {index < lines.length - 1 ? <br /> : null}
-        </span>
-      );
-    }
-
     if (shouldUnderlineFinalYou && isLastLine) {
       const finalYouMatch = line.match(/^(.*?)(you)([.!?]?)$/i);
 
