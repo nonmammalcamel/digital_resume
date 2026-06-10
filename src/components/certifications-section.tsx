@@ -2,15 +2,14 @@ type FeaturedCertification = {
   id: string;
   title: string;
   issuer: string;
+  description: string;
   href: string;
 };
 
 type CertificationItem = {
   id: string;
-  name: string;
-  issuer: string;
-  date: string;
-  description: string;
+  title: string;
+  href?: string;
 };
 
 type CertificationCategory = {
@@ -61,10 +60,17 @@ export function CertificationsSection({
                 aria-hidden="true"
               />
 
-              <span>
-                {featured.title}
+              <span className="certification-feature-content">
+                <span className="certification-feature-title">
+                  {featured.title}
+                </span>
+
                 <span className="certification-feature-issuer">
                   {featured.issuer}
+                </span>
+
+                <span className="certification-feature-description">
+                  {featured.description}
                 </span>
               </span>
             </a>
@@ -77,26 +83,47 @@ export function CertificationsSection({
                 <span>{category.title}</span>
               </summary>
 
-              <div className="certification-list">
-                {category.items.map((item, index) => (
-                  <article className="certification-item" key={item.id}>
-                    <div className="certification-index">
-                      {String(index + 1).padStart(2, '0')}
-                    </div>
+              <div className="certification-document-grid">
+                {category.items.map((item) => {
+                  const documentContent = (
+                    <span className="document-icon" aria-hidden="true">
+                      <span className="document-corner" />
+                      <span className="document-lines">
+                        <span />
+                        <span />
+                        <span />
+                      </span>
+                      <span className="document-title">{item.title}</span>
+                    </span>
+                  );
 
-                    <div className="certification-content">
-                      <h3 className="certification-name">{item.name}</h3>
+                  if (item.href) {
+                    return (
+                      <a
+                        className="document-tile certification-document-tile"
+                        href={item.href}
+                        key={item.id}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${item.title} certification`}
+                      >
+                        {documentContent}
+                      </a>
+                    );
+                  }
 
-                      <p className="certification-meta">
-                        {item.issuer} · {item.date}
-                      </p>
-
-                      <p className="certification-description">
-                        {item.description}
-                      </p>
-                    </div>
-                  </article>
-                ))}
+                  return (
+                    <button
+                      className="document-tile certification-document-tile"
+                      key={item.id}
+                      type="button"
+                      aria-label={`${item.title} certification coming soon`}
+                      disabled
+                    >
+                      {documentContent}
+                    </button>
+                  );
+                })}
               </div>
             </details>
           ))}

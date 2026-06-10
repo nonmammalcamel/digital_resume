@@ -94,7 +94,9 @@ export const siteContent = {
       id: 'cal-state-la-paralegal',
       title: 'Paralegal Certificate',
       issuer: 'Cal State LA',
-      href: '/certifications/paralegal-certificate.pdf'
+      description:
+        'Completed a paralegal certificate program focused on legal research, legal writing, litigation procedure, document preparation, ethics, and practical legal support skills.',
+      href: '/certs/paralegal-certificate.pdf'
     },
     categories: [
       {
@@ -102,82 +104,21 @@ export const siteContent = {
         title: 'eDiscovery Certifications',
         items: [
           {
-            id: 'ediscovery-01',
-            name: 'eDiscovery Certification Placeholder 01',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
+            id: 'disco-data-management',
+            title: 'DISCO Data Management',
+            href: '/certs/disco-data-management.pdf'
           },
           {
-            id: 'ediscovery-02',
-            name: 'eDiscovery Certification Placeholder 02',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'ediscovery-03',
-            name: 'eDiscovery Certification Placeholder 03',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'ediscovery-04',
-            name: 'eDiscovery Certification Placeholder 04',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'ediscovery-05',
-            name: 'eDiscovery Certification Placeholder 05',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
+            id: 'disco-search-review',
+            title: 'DISCO Search & Review',
+            href: '/certs/disco-search-review.pdf'
           }
         ]
       },
       {
         id: 'digital-forensics',
         title: 'Digital Forensics Certifications',
-        items: [
-          {
-            id: 'digital-forensics-01',
-            name: 'Digital Forensics Certification Placeholder 01',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'digital-forensics-02',
-            name: 'Digital Forensics Certification Placeholder 02',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'digital-forensics-03',
-            name: 'Digital Forensics Certification Placeholder 03',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'digital-forensics-04',
-            name: 'Digital Forensics Certification Placeholder 04',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          },
-          {
-            id: 'digital-forensics-05',
-            name: 'Digital Forensics Certification Placeholder 05',
-            issuer: 'Issuing organization',
-            date: 'Date earned',
-            description: 'Short credential description placeholder.'
-          }
-        ]
+        items: []
       }
     ]
   },
