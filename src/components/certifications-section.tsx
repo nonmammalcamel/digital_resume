@@ -80,7 +80,10 @@ function CertificationDocumentTile({ item }: { item: CertificationItem }) {
 function CertificationDocumentDropdown({ item }: { item: CertificationItem }) {
   return (
     <details className="certification-document-dropdown-tile">
-      <summary className="certification-document-dropdown-summary">
+      <summary
+        className="certification-document-dropdown-summary"
+        aria-label={`Expand ${item.title} certification group`}
+      >
         <DocumentIcon title={item.title} showToggle />
       </summary>
 
@@ -140,24 +143,36 @@ export function CertificationsSection({
             </details>
           ) : null}
 
-          {categories.map((category) => (
-            <details className="certification-category" key={category.id}>
-              <summary className="certification-summary">
-                <span className="certification-marker" aria-hidden="true" />
-                <span>{category.title}</span>
-              </summary>
+          {categories.map((category) => {
+            const hasNestedItems = category.items.some(
+              (item) => item.children && item.children.length > 0
+            );
 
-              <div className="certification-document-grid">
-                {category.items.map((item) =>
-                  item.children && item.children.length > 0 ? (
-                    <CertificationDocumentDropdown item={item} key={item.id} />
-                  ) : (
-                    <CertificationDocumentTile item={item} key={item.id} />
-                  )
-                )}
-              </div>
-            </details>
-          ))}
+            return (
+              <details className="certification-category" key={category.id}>
+                <summary className="certification-summary">
+                  <span className="certification-marker" aria-hidden="true" />
+                  <span>{category.title}</span>
+                </summary>
+
+                <div
+                  className={
+                    hasNestedItems
+                      ? 'certification-tree-grid'
+                      : 'certification-document-grid'
+                  }
+                >
+                  {category.items.map((item) =>
+                    item.children && item.children.length > 0 ? (
+                      <CertificationDocumentDropdown item={item} key={item.id} />
+                    ) : (
+                      <CertificationDocumentTile item={item} key={item.id} />
+                    )
+                  )}
+                </div>
+              </details>
+            );
+          })}
         </div>
       </div>
     </section>

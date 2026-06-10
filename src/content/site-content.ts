@@ -148,6 +148,28 @@ export const siteContent = {
                 title: 'Intro to Vulnerability Management'
               }
             ]
+          },
+          {
+            id: 'digital-forensics-placeholder',
+            title: 'Placeholder',
+            children: [
+              {
+                id: 'placeholder-subdocument-01',
+                title: 'Subdocument Placeholder 01'
+              },
+              {
+                id: 'placeholder-subdocument-02',
+                title: 'Subdocument Placeholder 02'
+              },
+              {
+                id: 'placeholder-subdocument-03',
+                title: 'Subdocument Placeholder 03'
+              },
+              {
+                id: 'placeholder-subdocument-04',
+                title: 'Subdocument Placeholder 04'
+              }
+            ]
           }
         ]
       }
