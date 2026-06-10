@@ -120,24 +120,34 @@ export const siteContent = {
         title: 'Digital Forensics Certifications',
         items: [
           {
-            id: 'digital-forensics-01',
-            title: 'Digital Forensics Certification Placeholder 01'
-          },
-          {
-            id: 'digital-forensics-02',
-            title: 'Digital Forensics Certification Placeholder 02'
-          },
-          {
-            id: 'digital-forensics-03',
-            title: 'Digital Forensics Certification Placeholder 03'
-          },
-          {
-            id: 'digital-forensics-04',
-            title: 'Digital Forensics Certification Placeholder 04'
-          },
-          {
-            id: 'digital-forensics-05',
-            title: 'Digital Forensics Certification Placeholder 05'
+            id: 'blue-team-junior-analyst',
+            title: 'Blue Team Junior Analyst',
+            children: [
+              {
+                id: 'intro-digital-forensics',
+                title: 'Intro to Digital Forensics'
+              },
+              {
+                id: 'intro-osint',
+                title: 'Intro to OSINT'
+              },
+              {
+                id: 'intro-dark-web',
+                title: 'Intro to the Dark Web'
+              },
+              {
+                id: 'intro-network-analysis',
+                title: 'Intro to Network Analysis'
+              },
+              {
+                id: 'intro-threat-hunting',
+                title: 'Intro to Threat Hunting'
+              },
+              {
+                id: 'intro-vulnerability-management',
+                title: 'Intro to Vulnerability Management'
+              }
+            ]
           }
         ]
       }

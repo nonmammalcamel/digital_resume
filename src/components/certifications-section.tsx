@@ -10,6 +10,7 @@ type CertificationItem = {
   id: string;
   title: string;
   href?: string;
+  children?: readonly CertificationItem[];
 };
 
 type CertificationCategory = {
@@ -24,6 +25,73 @@ type CertificationsSectionProps = {
   featured?: FeaturedCertification;
   categories: readonly CertificationCategory[];
 };
+
+function DocumentIcon({
+  title,
+  showToggle = false
+}: {
+  title: string;
+  showToggle?: boolean;
+}) {
+  return (
+    <span className="document-icon" aria-hidden="true">
+      {showToggle ? <span className="document-plus" aria-hidden="true" /> : null}
+
+      <span className="document-corner" />
+      <span className="document-lines">
+        <span />
+        <span />
+        <span />
+      </span>
+      <span className="document-title">{title}</span>
+    </span>
+  );
+}
+
+function CertificationDocumentTile({ item }: { item: CertificationItem }) {
+  const documentContent = <DocumentIcon title={item.title} />;
+
+  if (item.href) {
+    return (
+      <a
+        className="document-tile certification-document-tile"
+        href={item.href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Open ${item.title} certification`}
+      >
+        {documentContent}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      className="document-tile certification-document-tile"
+      type="button"
+      aria-label={`${item.title} certification coming soon`}
+      disabled
+    >
+      {documentContent}
+    </button>
+  );
+}
+
+function CertificationDocumentDropdown({ item }: { item: CertificationItem }) {
+  return (
+    <details className="certification-document-dropdown-tile">
+      <summary className="certification-document-dropdown-summary">
+        <DocumentIcon title={item.title} showToggle />
+      </summary>
+
+      <div className="certification-nested-document-grid">
+        {item.children?.map((child) => (
+          <CertificationDocumentTile item={child} key={child.id} />
+        ))}
+      </div>
+    </details>
+  );
+}
 
 export function CertificationsSection({
   title,
@@ -66,15 +134,7 @@ export function CertificationsSection({
                   rel="noreferrer"
                   aria-label={`Open ${featured.title} certification`}
                 >
-                  <span className="document-icon" aria-hidden="true">
-                    <span className="document-corner" />
-                    <span className="document-lines">
-                      <span />
-                      <span />
-                      <span />
-                    </span>
-                    <span className="document-title">{featured.title}</span>
-                  </span>
+                  <DocumentIcon title={featured.title} />
                 </a>
               </div>
             </details>
@@ -88,46 +148,13 @@ export function CertificationsSection({
               </summary>
 
               <div className="certification-document-grid">
-                {category.items.map((item) => {
-                  const documentContent = (
-                    <span className="document-icon" aria-hidden="true">
-                      <span className="document-corner" />
-                      <span className="document-lines">
-                        <span />
-                        <span />
-                        <span />
-                      </span>
-                      <span className="document-title">{item.title}</span>
-                    </span>
-                  );
-
-                  if (item.href) {
-                    return (
-                      <a
-                        className="document-tile certification-document-tile"
-                        href={item.href}
-                        key={item.id}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`Open ${item.title} certification`}
-                      >
-                        {documentContent}
-                      </a>
-                    );
-                  }
-
-                  return (
-                    <button
-                      className="document-tile certification-document-tile"
-                      key={item.id}
-                      type="button"
-                      aria-label={`${item.title} certification coming soon`}
-                      disabled
-                    >
-                      {documentContent}
-                    </button>
-                  );
-                })}
+                {category.items.map((item) =>
+                  item.children && item.children.length > 0 ? (
+                    <CertificationDocumentDropdown item={item} key={item.id} />
+                  ) : (
+                    <CertificationDocumentTile item={item} key={item.id} />
+                  )
+                )}
               </div>
             </details>
           ))}

@@ -372,7 +372,8 @@ main {
   list-style: none;
 }
 
-.certification-summary::-webkit-details-marker {
+.certification-summary::-webkit-details-marker,
+.certification-document-dropdown-summary::-webkit-details-marker {
   display: none;
 }
 
@@ -411,6 +412,66 @@ main {
 
 .certification-document-tile {
   width: 8.75rem;
+}
+
+.certification-document-dropdown-tile {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.certification-document-dropdown-summary {
+  display: block;
+  width: 8.75rem;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  list-style: none;
+}
+
+.certification-nested-document-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 8.75rem);
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.document-plus {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.document-plus::before {
+  content: '+';
+}
+
+.certification-document-dropdown-tile[open] .document-plus::before {
+  content: '-';
+}
+
+.certification-document-dropdown-summary:hover .document-icon,
+.certification-document-dropdown-summary:focus-visible .document-icon {
+  transform: translateY(-0.16rem);
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px var(--amber);
+}
+
+.certification-document-dropdown-summary:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 0.35rem;
 }
 
 .work-sample-body {
@@ -616,7 +677,8 @@ main {
     gap: 2.5rem;
   }
 
-  .certification-document-grid {
+  .certification-document-grid,
+  .certification-nested-document-grid {
     grid-template-columns: repeat(3, 8.75rem);
     gap: 1.5rem;
   }
@@ -670,12 +732,14 @@ main {
     text-align: left;
   }
 
-  .certification-document-grid {
+  .certification-document-grid,
+  .certification-nested-document-grid {
     grid-template-columns: repeat(2, 7.75rem);
     gap: 1.75rem;
   }
 
-  .certification-document-tile {
+  .certification-document-tile,
+  .certification-document-dropdown-summary {
     width: 7.75rem;
   }
 }
@@ -716,7 +780,9 @@ main {
   }
 
   .document-tile:not(:disabled):hover .document-icon,
-  .document-tile:not(:disabled):focus-visible .document-icon {
+  .document-tile:not(:disabled):focus-visible .document-icon,
+  .certification-document-dropdown-summary:hover .document-icon,
+  .certification-document-dropdown-summary:focus-visible .document-icon {
     transform: none;
   }
 }
