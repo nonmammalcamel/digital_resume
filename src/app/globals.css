@@ -402,8 +402,8 @@ main {
 
 .certification-document-grid {
   display: grid;
-  grid-template-columns: repeat(2, 8.75rem);
-  gap: 2.25rem;
+  grid-template-columns: repeat(5, 8.75rem);
+  gap: 1rem;
   padding: 1rem 0.85rem 1.1rem;
   border-top: 1px solid var(--line-soft);
   align-items: start;
@@ -614,6 +614,11 @@ main {
   .document-grid {
     grid-template-columns: repeat(2, 8.75rem);
     gap: 2.5rem;
+  }
+
+  .certification-document-grid {
+    grid-template-columns: repeat(3, 8.75rem);
+    gap: 1.5rem;
   }
 
   .references-grid {
