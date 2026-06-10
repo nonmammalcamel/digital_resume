@@ -485,9 +485,8 @@ a.document-link-corner:focus-visible {
   outline-offset: 0.2rem;
 }
 
-.document-link-corner-disabled {
-  cursor: not-allowed;
-  opacity: 0.72;
+.document-link-corner-placeholder {
+  cursor: default;
 }
 
 .certification-nested-document-grid {

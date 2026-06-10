@@ -99,7 +99,7 @@ function CertificationDocumentDropdown({ item }: { item: CertificationItem }) {
           </a>
         ) : (
           <span
-            className="document-link-corner document-link-corner-disabled"
+            className="document-link-corner document-link-corner-placeholder"
             aria-hidden="true"
             title={`${item.title} PDF coming soon`}
           >
