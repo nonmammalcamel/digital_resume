@@ -48,32 +48,36 @@ export function CertificationsSection({
 
         <div className="certification-groups">
           {featured ? (
-            <a
-              className="certification-feature-summary"
-              href={featured.href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Open ${featured.title}`}
-            >
-              <span
-                className="certification-feature-marker"
-                aria-hidden="true"
-              />
+            <details className="certification-category">
+              <summary className="certification-summary">
+                <span className="certification-marker" aria-hidden="true" />
+                <span>{featured.title}</span>
+              </summary>
 
-              <span className="certification-feature-content">
-                <span className="certification-feature-title">
-                  {featured.title}
-                </span>
+              <div className="certification-feature-copy">
+                <p>{featured.description}</p>
+              </div>
 
-                <span className="certification-feature-issuer">
-                  {featured.issuer}
-                </span>
-
-                <span className="certification-feature-description">
-                  {featured.description}
-                </span>
-              </span>
-            </a>
+              <div className="certification-document-grid">
+                <a
+                  className="document-tile certification-document-tile"
+                  href={featured.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${featured.title} certification`}
+                >
+                  <span className="document-icon" aria-hidden="true">
+                    <span className="document-corner" />
+                    <span className="document-lines">
+                      <span />
+                      <span />
+                      <span />
+                    </span>
+                    <span className="document-title">{featured.title}</span>
+                  </span>
+                </a>
+              </div>
+            </details>
           ) : null}
 
           {categories.map((category) => (

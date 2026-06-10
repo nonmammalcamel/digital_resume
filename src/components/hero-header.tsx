@@ -44,6 +44,14 @@ export function HeroHeader({ name, role, navItems }: HeroHeaderProps) {
   return (
     <header className="hero" aria-labelledby="hero-title">
       <div className="hero-inner">
+        <nav className="hero-nav" aria-label="Resume sections">
+          {navItems.map((item) => (
+            <a className="hero-nav-link" href={item.href} key={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
         <h1 id="hero-title" className="hero-name">
           {name.toUpperCase()}
         </h1>
@@ -62,14 +70,6 @@ export function HeroHeader({ name, role, navItems }: HeroHeaderProps) {
             />
           </span>
         </div>
-
-        <nav className="hero-nav" aria-label="Resume sections">
-          {navItems.map((item) => (
-            <a className="hero-nav-link" href={item.href} key={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
 
         <div className="hero-rule" aria-hidden="true" />
       </div>
