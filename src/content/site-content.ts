@@ -231,7 +231,7 @@ export const siteContent = {
         id: 'reference-01',
         name: 'Jason Brooks',
         role: 'CalState LA Professor\nLegal Tech Professional',
-        phone: '(714)–230–5204',
+        phone: '(714) 230–5204',
         email: 'jbrook18@calstatela.edu'
       },
       {
