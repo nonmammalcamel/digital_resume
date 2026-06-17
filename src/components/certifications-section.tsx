@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 type FeaturedCertification = {
   id: string;
   title: string;
@@ -26,17 +28,9 @@ type CertificationsSectionProps = {
   categories: readonly CertificationCategory[];
 };
 
-function DocumentIcon({
-  title,
-  showToggle = false
-}: {
-  title: string;
-  showToggle?: boolean;
-}) {
+function DocumentIcon({ title }: { title: string }) {
   return (
     <span className="document-icon" aria-hidden="true">
-      {showToggle ? <span className="document-plus" aria-hidden="true" /> : null}
-
       <span className="document-corner" />
       <span className="document-lines">
         <span />
@@ -48,72 +42,83 @@ function DocumentIcon({
   );
 }
 
-function CertificationDocumentTile({ item }: { item: CertificationItem }) {
-  const documentContent = <DocumentIcon title={item.title} />;
-
-  if (item.href) {
+function DocumentMainLink({
+  title,
+  href,
+  isDisabled = false,
+  children
+}: {
+  title: string;
+  href?: string;
+  isDisabled?: boolean;
+  children: ReactNode;
+}) {
+  if (href) {
     return (
       <a
-        className="document-tile certification-document-tile"
-        href={item.href}
+        className="document-main-link"
+        href={href}
         target="_blank"
         rel="noreferrer"
-        aria-label={`Open ${item.title} certification`}
+        aria-label={`Open ${title}`}
+        title={`Open ${title}`}
       >
-        {documentContent}
+        {children}
       </a>
     );
   }
 
   return (
-    <button
-      className="document-tile certification-document-tile"
-      type="button"
-      aria-label={`${item.title} certification coming soon`}
-      disabled
+    <span
+      className={
+        isDisabled
+          ? 'document-main-link document-main-link-disabled'
+          : 'document-main-link document-main-link-placeholder'
+      }
+      title={isDisabled ? `${title} coming soon` : undefined}
     >
-      {documentContent}
-    </button>
+      {children}
+    </span>
+  );
+}
+
+function CertificationDocumentTile({ item }: { item: CertificationItem }) {
+  return (
+    <div className="document-tile certification-document-tile">
+      <DocumentMainLink
+        title={`${item.title} certification`}
+        href={item.href}
+        isDisabled={!item.href}
+      >
+        <DocumentIcon title={item.title} />
+      </DocumentMainLink>
+    </div>
   );
 }
 
 function CertificationDocumentDropdown({ item }: { item: CertificationItem }) {
   return (
-    <details className="certification-document-dropdown-tile">
-      <summary
-        className="certification-document-dropdown-summary"
-        aria-label={`Expand ${item.title} certification group`}
-      >
-        <DocumentIcon title={item.title} showToggle />
+    <div className="certification-document-dropdown-tile">
+      <div className="document-tile certification-document-tile certification-document-parent-tile">
+        <DocumentMainLink title={`${item.title} PDF`} href={item.href}>
+          <DocumentIcon title={item.title} />
+        </DocumentMainLink>
 
-        {item.href ? (
-          <a
-            className="document-link-corner"
-            href={item.href}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Open ${item.title} PDF`}
-            title={`Open ${item.title} PDF`}
-          >
-            ↗
-          </a>
-        ) : (
-          <span
-            className="document-link-corner document-link-corner-placeholder"
-            aria-hidden="true"
-            title={`${item.title} PDF coming soon`}
-          >
-            ↗
-          </span>
-        )}
-      </summary>
+        <details className="certification-document-dropdown-details">
+          <summary
+            className="document-expand-button"
+            aria-label={`Expand ${item.title} certification group`}
+            title={`Expand ${item.title} certification group`}
+          />
 
-      <div className="certification-nested-document-grid">
-        {item.children?.map((child) => (
-          <CertificationDocumentTile item={child} key={child.id} />
-        ))}
+          <div className="certification-nested-document-grid">
+            {item.children?.map((child) => (
+              <CertificationDocumentTile item={child} key={child.id} />
+            ))}
+          </div>
+        </details>
       </div>
-    </details>
+    </div>
   );
 }
 
@@ -151,15 +156,7 @@ export function CertificationsSection({
               </div>
 
               <div className="certification-document-grid">
-                <a
-                  className="document-tile certification-document-tile"
-                  href={featured.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${featured.title} certification`}
-                >
-                  <DocumentIcon title={featured.title} />
-                </a>
+                <CertificationDocumentTile item={featured} />
               </div>
             </details>
           ) : null}

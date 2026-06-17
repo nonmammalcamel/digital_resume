@@ -10,6 +10,20 @@ type WorkSamplesSectionProps = {
   items: readonly WorkSampleItem[];
 };
 
+function DocumentIcon({ title }: { title: string }) {
+  return (
+    <span className="document-icon" aria-hidden="true">
+      <span className="document-corner" />
+      <span className="document-lines">
+        <span />
+        <span />
+        <span />
+      </span>
+      <span className="document-title">{title}</span>
+    </span>
+  );
+}
+
 export function WorkSamplesSection({
   title,
   intro,
@@ -32,46 +46,29 @@ export function WorkSamplesSection({
           <p className="section-intro">{intro}</p>
 
           <div className="document-grid">
-            {items.map((item) => {
-              const documentContent = (
-                <span className="document-icon" aria-hidden="true">
-                  <span className="document-corner" />
-                  <span className="document-lines">
-                    <span />
-                    <span />
-                    <span />
-                  </span>
-                  <span className="document-title">{item.title}</span>
-                </span>
-              );
-
-              if (item.href) {
-                return (
-                  <a
-                    className="document-tile"
-                    href={item.href}
-                    key={item.id}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Open ${item.title} work sample in a new tab`}
-                  >
-                    {documentContent}
-                  </a>
-                );
-              }
-
-              return (
-                <button
+            {items.map((item) =>
+              item.href ? (
+                <a
                   className="document-tile"
+                  href={item.href}
                   key={item.id}
-                  type="button"
-                  aria-label={`${item.title} work sample coming soon`}
-                  disabled
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${item.title} work sample`}
+                  title={`Open ${item.title} work sample`}
                 >
-                  {documentContent}
-                </button>
-              );
-            })}
+                  <DocumentIcon title={item.title} />
+                </a>
+              ) : (
+                <span
+                  className="document-tile document-tile-disabled"
+                  key={item.id}
+                  title={`${item.title} work sample coming soon`}
+                >
+                  <DocumentIcon title={item.title} />
+                </span>
+              )
+            )}
           </div>
         </div>
       </div>

@@ -373,7 +373,7 @@ main {
 }
 
 .certification-summary::-webkit-details-marker,
-.certification-document-dropdown-summary::-webkit-details-marker {
+.document-expand-button::-webkit-details-marker {
   display: none;
 }
 
@@ -425,7 +425,6 @@ main {
 }
 
 .certification-document-dropdown-tile {
-  position: relative;
   display: grid;
   justify-items: center;
   align-content: start;
@@ -433,61 +432,89 @@ main {
   padding: 0.25rem 0 1rem;
 }
 
-.certification-document-dropdown-summary {
+.certification-document-parent-tile {
   position: relative;
-  display: block;
-  width: 8.75rem;
-  padding: 0;
-  color: inherit;
-  cursor: pointer;
-  list-style: none;
 }
 
-.certification-document-dropdown-tile[open] .certification-document-dropdown-summary::after {
+.certification-document-dropdown-details {
+  width: 8.75rem;
+}
+
+.certification-document-dropdown-details[open]::before {
   content: '';
   position: absolute;
+  top: 10.75rem;
   left: 50%;
-  bottom: -2.15rem;
   width: 1px;
   height: 2.15rem;
   background: var(--line);
   transform: translateX(-50%);
 }
 
-.document-link-corner {
+.document-main-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.document-main-link-disabled .document-icon,
+.document-tile-disabled .document-icon {
+  opacity: 0.42;
+}
+
+.document-main-link[href]:hover .document-icon,
+.document-main-link[href]:focus-visible .document-icon,
+a.document-tile:hover .document-icon,
+a.document-tile:focus-visible .document-icon {
+  transform: translateY(-0.16rem);
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px var(--amber);
+}
+
+.document-main-link[href]:focus-visible,
+a.document-tile:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 0.35rem;
+}
+
+.document-expand-button {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
+  top: -1px;
+  right: -1px;
+  z-index: 20;
   display: grid;
   place-items: center;
   width: 2rem;
   height: 2rem;
-  overflow: visible;
   border-left: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: var(--bg);
   color: var(--amber);
-  font-size: 1.9rem;
-  font-weight: 800;
-  line-height: 0.8;
-  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
 }
 
-a.document-link-corner:hover,
-a.document-link-corner:focus-visible {
+.document-expand-button::before {
+  content: '+';
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.certification-document-dropdown-details[open] .document-expand-button::before {
+  content: '-';
+}
+
+.document-expand-button:hover,
+.document-expand-button:focus-visible {
   color: var(--body);
   border-color: var(--amber);
   box-shadow: 0 0 0 1px var(--amber);
 }
 
-a.document-link-corner:focus-visible {
+.document-expand-button:focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 0.2rem;
-}
-
-.document-link-corner-placeholder {
-  cursor: default;
 }
 
 .certification-nested-document-grid {
@@ -497,7 +524,7 @@ a.document-link-corner:focus-visible {
   grid-template-columns: 6.25rem;
   gap: 0.9rem;
   width: 6.25rem;
-  margin-top: 2.15rem;
+  margin: 2.15rem auto 0;
   padding-top: 1.35rem;
   align-items: start;
 }
@@ -547,6 +574,15 @@ a.document-link-corner:focus-visible {
   height: 1.55rem;
 }
 
+.certification-nested-document-grid .document-expand-button {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.certification-nested-document-grid .document-expand-button::before {
+  font-size: 1.05rem;
+}
+
 .certification-nested-document-grid .document-lines {
   gap: 0.28rem;
   width: 70%;
@@ -564,43 +600,6 @@ a.document-link-corner:focus-visible {
   line-height: 1.16;
 }
 
-.document-plus {
-  position: absolute;
-  top: 0.45rem;
-  left: 0.45rem;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 1.35rem;
-  height: 1.35rem;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--fg);
-  font-size: 0.95rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.document-plus::before {
-  content: '+';
-}
-
-.certification-document-dropdown-tile[open] .document-plus::before {
-  content: '-';
-}
-
-.certification-document-dropdown-summary:hover .document-icon,
-.certification-document-dropdown-summary:focus-visible .document-icon {
-  transform: translateY(-0.16rem);
-  border-color: var(--amber);
-  box-shadow: 0 0 0 1px var(--amber);
-}
-
-.certification-document-dropdown-summary:focus-visible {
-  outline: 2px solid var(--amber);
-  outline-offset: 0.35rem;
-}
-
 .work-sample-body {
   display: grid;
   gap: 1.25rem;
@@ -614,23 +613,15 @@ a.document-link-corner:focus-visible {
 }
 
 .document-tile {
+  position: relative;
   display: block;
   width: 8.75rem;
   padding: 0;
   border: 0;
   background: transparent;
   color: inherit;
-  cursor: pointer;
   text-align: left;
   text-decoration: none;
-}
-
-.document-tile:disabled {
-  cursor: not-allowed;
-}
-
-.document-tile:disabled .document-icon {
-  opacity: 0.42;
 }
 
 .document-icon {
@@ -713,18 +704,6 @@ a.document-link-corner:focus-visible {
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--document-text);
-}
-
-.document-tile:not(:disabled):hover .document-icon,
-.document-tile:not(:disabled):focus-visible .document-icon {
-  transform: translateY(-0.16rem);
-  border-color: var(--amber);
-  box-shadow: 0 0 0 1px var(--amber);
-}
-
-.document-tile:focus-visible {
-  outline: 2px solid var(--amber);
-  outline-offset: 0.35rem;
 }
 
 .references-grid {
@@ -870,15 +849,18 @@ a.document-link-corner:focus-visible {
   }
 
   .certification-document-tile,
-  .certification-document-dropdown-summary,
+  .certification-document-dropdown-details,
   .certification-document-dropdown-tile {
     width: 7.75rem;
   }
 
-  .document-link-corner {
+  .document-expand-button {
     width: 1.85rem;
     height: 1.85rem;
-    font-size: 1.75rem;
+  }
+
+  .document-expand-button::before {
+    font-size: 1.25rem;
   }
 
   .certification-nested-document-grid {
@@ -912,6 +894,10 @@ a.document-link-corner:focus-visible {
     min-height: 9.5rem;
   }
 
+  .certification-document-dropdown-details[open]::before {
+    top: 9.5rem;
+  }
+
   .certification-nested-document-grid .document-icon {
     min-height: 8.25rem;
   }
@@ -931,10 +917,10 @@ a.document-link-corner:focus-visible {
     transition: none;
   }
 
-  .document-tile:not(:disabled):hover .document-icon,
-  .document-tile:not(:disabled):focus-visible .document-icon,
-  .certification-document-dropdown-summary:hover .document-icon,
-  .certification-document-dropdown-summary:focus-visible .document-icon {
+  .document-main-link[href]:hover .document-icon,
+  .document-main-link[href]:focus-visible .document-icon,
+  a.document-tile:hover .document-icon,
+  a.document-tile:focus-visible .document-icon {
     transform: none;
   }
 }
