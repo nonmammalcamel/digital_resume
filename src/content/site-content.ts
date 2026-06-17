@@ -237,30 +237,30 @@ export const siteContent = {
       {
         id: 'reference-02',
         name: 'Peter D. Graves',
-        role: 'Professional Role / Relationship',
-        phone: '(555) 000-0002',
-        email: 'reference02@example.com'
+        role: 'President @ CineMarket, LLC',
+        phone: '(310) 717-1871',
+        email: 'peter@cinemarketfilm.com'
       },
       {
         id: 'reference-03',
         name: 'Jason Cole',
-        role: 'Professional Role / Relationship',
+        role: 'CalState LA Professor\nAttorney',
         phone: '(555) 000-0003',
-        email: 'reference03@example.com'
+        email: 'jcole17@calstatela.edu'
       },
       {
         id: 'reference-04',
         name: 'Bobby T. Rimas',
-        role: 'Professional Role / Relationship',
+        role: 'CalState LA Professor\nParalegal @ Seyfarth Shaw, LLP',
         phone: '(555) 000-0004',
-        email: 'reference04@example.com'
+        email: 'bobby.tom.rimas@gmail.com'
       },
       {
         id: 'reference-05',
         name: 'Peter Hong',
-        role: 'Professional Role / Relationship',
+        role: 'CalState LA Professor\nAttorney',
         phone: '(555) 000-0005',
-        email: 'reference05@example.com'
+        email: 'pjshong1@gmail.com'
       }
     ]
   },
