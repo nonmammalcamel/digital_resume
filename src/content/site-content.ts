@@ -52,8 +52,8 @@ export const siteContent = {
         organization: 'CineMarket, LLC',
         dates: '2021 – Present',
         details: [
-          'Rebuilt the accounting and project databases, making expense reporting much faster and creating cloud-accessible systems for scripts, notes, and IP contract tracking.',
-          'Provided script coverage and detailed creative feedback as two feature films and one documentary moved from development through release on Netflix and other streaming platforms.'
+          'I provided legal perspective on several film contracts for CineMarket’s consultation business—most notably reviewing IP rights for Elmore Leonard’s Cat Chaser and right of transfer for the Highlander film franchise.',
+          'I rebuilt the accounting and project databases, making expense reporting much faster and creating cloud-accessible systems for scripts, notes, and IP contract tracking.'
         ]
       },
       {
@@ -62,17 +62,17 @@ export const siteContent = {
         organization: 'American Soil & Stone',
         dates: '2014 – 2017',
         details: [
-          'Started as a sales associate and was later promoted to domestic purchasing manager, eventually also becoming the point of contact for the large-scale stone fabrication department.',
-          'Served as the company’s primary internal partner while developing a new PoS system, during which I completed the first full inventory check in over a decade—tracking thousands of cubic yards of soil, gravel, and mulch, as well as several thousand tons of flagstone and boulders.'
+          'I started as a sales associate and was later promoted to domestic purchasing manager, eventually also becoming the point of contact for the large-scale stone fabrication department.',
+          'I was the company’s primary internal partner while developing a new PoS system, during which I completed the first full inventory check in over a decade—tracking thousands of cubic yards of soil, gravel, and mulch, as well as several thousand tons of flagstone and boulders.'
         ]
       },
       {
         id: 'kirby-cabinetry',
         role: 'Custom Cabinet Designer & Fabricator',
         organization: 'Kirby Cabinetry',
-        dates: '2017 – 2023',
+        dates: '2017 – 2020, 2021 – 2023',
         details: [
-          'Helped carry roughly 25 high-end custom cabinetry projects from early design conversations through fabrication and final assembly.'
+          'I helped carry roughly 25 high-end custom cabinetry projects from early design conversations through fabrication and final assembly.'
         ]
       },
       {
@@ -81,7 +81,7 @@ export const siteContent = {
         organization: '',
         dates: '2016 – 2024',
         details: [
-          'Across one feature film, seven short films, three podcasts, and two videogames, composed and recorded original music while aiming to serve each creator’s vision rather than imposing my own.'
+          'Across one feature film, seven short films, three podcasts, and two videogames, I composed and recorded original music, always aiming to serve each creator’s vision rather than imposing my own.'
         ]
       }
     ]
