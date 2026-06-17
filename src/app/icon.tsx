@@ -18,13 +18,13 @@ export default function Icon() {
           alignItems: 'center',
           justifyContent: 'center',
           background: '#000000',
-          border: '3px solid #65a86a',
-          color: '#d6a542',
-          fontSize: 28,
-          fontWeight: 800,
-          letterSpacing: '-0.08em',
+          border: '4px solid #d6a542',
+          color: '#d6ffd8',
+          fontSize: 34,
+          fontWeight: 900,
+          letterSpacing: '-0.04em',
           fontFamily:
-            'SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace'
+            'Arial, Helvetica, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace'
         }}
       >
         TK
