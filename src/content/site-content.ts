@@ -1,7 +1,7 @@
 export const siteContent = {
   identity: {
     name: 'Travis Kirby',
-    role: 'Paralegal / Legal Tech'
+    role: 'Litigation Paralegal / eDiscovery / Legal Tech '
   },
   navigation: [
     {
