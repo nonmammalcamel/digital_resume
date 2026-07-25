@@ -44,13 +44,14 @@ export function LoadingScreen() {
       return;
     }
 
-    const canvas = canvasRef.current;
+   const canvasElement = canvasRef.current;
 
-    if (!canvas) {
-      return;
-    }
+if (!canvasElement) {
+  return;
+}
 
-    const context = canvas.getContext('2d');
+const canvas = canvasElement;
+const context = canvas.getContext('2d');
 
     if (!context) {
       return;
