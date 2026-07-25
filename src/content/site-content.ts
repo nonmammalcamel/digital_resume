@@ -33,16 +33,19 @@ export const siteContent = {
       href: '#contact'
     }
   ],
-  about: {
-    title: 'About Me',
-    paragraphs: [
-      'Welcome to my digital resume! I’m Travis.',
-      'I recently completed my paralegal certification at CSULA, and once I began my job hunt in the legal field, I quickly decided I should build this website for two reasons:',
-      '1. I don’t think the dominant job board culture of LinkedIn is conducive to showing anyone’s abilities, accomplishments, or personality; and…',
-      '2. The same culture only lets HR evaluate candidates by keywords and longevity—not talent or ambition.',
-      'After all, if I’ve dedicated the effort and energy to build this site just to sell myself to employers... imagine the level of focused, directed work I could do for you.'
-    ]
-  },
+ about: {
+  title: 'About Me',
+  paragraphs: [
+    'Welcome to my digital resume! I’m Travis.',
+    'I recently completed my paralegal certification at Cal State LA before immediately packing up and transplanting myself back to my hometown of Berkeley this July.',
+    'Once I began my job hunt in the Bay, I quickly decided I would build this website for two reasons:',
+    '1. I don’t think the dominant culture of LinkedIn and Indeed.com are conducive to displaying anybody’s real abilities or personality; and…',
+    '2. That same culture only lets HR evaluate candidates by keywords and longevity—not talent or ambition.',
+    'I excelled in the paralegal program because I had the opportunity for face-to-face interaction with my professors and fellow students—you can ask them about it! They came to know that I would thrive in the paralegal world because of who I am, not because they read a bullet list of work experience.',
+    'Because, while I haven’t worked at a law firm yet, I have spent years doing work that required careful documentation, technical troubleshooting, client communication, research, and managing large volumes of data. These are the skills that drew me to legal and legal tech worlds, and I’ve pursued training in these areas because that’s exactly where I’m aiming my career.',
+    'So, if you still want a boring normal resume, here you go. Otherwise, you can see the certifications I’ve earned and some work samples from my time at Cal State down below!'
+  ]
+},
   experience: {
     title: 'Experience',
     items: [
@@ -245,21 +248,21 @@ export const siteContent = {
         id: 'reference-03',
         name: 'Jason Cole',
         role: 'CalState LA Professor\nAttorney',
-        phone: '(555) 000-0003',
+        phone: '(310) 427-5838',
         email: 'jcole17@calstatela.edu'
       },
       {
         id: 'reference-04',
         name: 'Bobby T. Rimas',
         role: 'CalState LA Professor\nParalegal @ Seyfarth Shaw, LLP',
-        phone: '(555) 000-0004',
+        phone: '(213) 952-9914',
         email: 'bobby.tom.rimas@gmail.com'
       },
       {
         id: 'reference-05',
         name: 'Peter Hong',
         role: 'CalState LA Professor\nAttorney',
-        phone: '(555) 000-0005',
+        phone: '(323) 578-0544',
         email: 'pjshong1@gmail.com'
       }
     ]

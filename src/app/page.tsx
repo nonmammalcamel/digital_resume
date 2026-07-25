@@ -4,59 +4,64 @@ import { ContactSection } from '@/components/contact-section';
 import { EducationSection } from '@/components/education-section';
 import { ExperienceSection } from '@/components/experience-section';
 import { HeroHeader } from '@/components/hero-header';
+import { LoadingScreen } from '@/components/loading-screen';
 import { ReferencesSection } from '@/components/references-section';
 import { WorkSamplesSection } from '@/components/work-samples-section';
 import { siteContent } from '@/content/site-content';
 
 export default function HomePage() {
   return (
-    <main>
-      <HeroHeader
-        name={siteContent.identity.name}
-        role={siteContent.identity.role}
-        navItems={siteContent.navigation}
-      />
+    <>
+      <LoadingScreen />
 
-      <div className="page-content">
-        <AboutSection
-          title={siteContent.about.title}
-          paragraphs={siteContent.about.paragraphs}
+      <main>
+        <HeroHeader
+          name={siteContent.identity.name}
+          role={siteContent.identity.role}
+          navItems={siteContent.navigation}
         />
 
-        <ExperienceSection
-          title={siteContent.experience.title}
-          items={siteContent.experience.items}
-        />
+        <div className="page-content">
+          <AboutSection
+            title={siteContent.about.title}
+            paragraphs={siteContent.about.paragraphs}
+          />
 
-        <CertificationsSection
-          title={siteContent.certifications.title}
-          intro={siteContent.certifications.intro}
-          featured={siteContent.certifications.featured}
-          categories={siteContent.certifications.categories}
-        />
+          <ExperienceSection
+            title={siteContent.experience.title}
+            items={siteContent.experience.items}
+          />
 
-        <WorkSamplesSection
-          title={siteContent.workSamples.title}
-          intro={siteContent.workSamples.intro}
-          items={siteContent.workSamples.items}
-        />
+          <CertificationsSection
+            title={siteContent.certifications.title}
+            intro={siteContent.certifications.intro}
+            featured={siteContent.certifications.featured}
+            categories={siteContent.certifications.categories}
+          />
 
-        <EducationSection
-          title={siteContent.education.title}
-          items={siteContent.education.items}
-        />
+          <WorkSamplesSection
+            title={siteContent.workSamples.title}
+            intro={siteContent.workSamples.intro}
+            items={siteContent.workSamples.items}
+          />
 
-        <ReferencesSection
-          title={siteContent.references.title}
-          items={siteContent.references.items}
-        />
+          <EducationSection
+            title={siteContent.education.title}
+            items={siteContent.education.items}
+          />
 
-        <ContactSection
-          title={siteContent.contact.title}
-          intro={siteContent.contact.intro}
-          items={siteContent.contact.items}
-        />
-      </div>
-    </main>
+          <ReferencesSection
+            title={siteContent.references.title}
+            items={siteContent.references.items}
+          />
+
+          <ContactSection
+            title={siteContent.contact.title}
+            intro={siteContent.contact.intro}
+            items={siteContent.contact.items}
+          />
+        </div>
+      </main>
+    </>
   );
 }
