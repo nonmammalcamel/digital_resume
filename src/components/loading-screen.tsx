@@ -44,18 +44,20 @@ export function LoadingScreen() {
       return;
     }
 
-   const canvasElement = canvasRef.current;
+    const canvasElement = canvasRef.current;
 
-if (!canvasElement) {
-  return;
-}
-
-const canvas = canvasElement;
-const context = canvas.getContext('2d');
-
-    if (!context) {
+    if (!canvasElement) {
       return;
     }
+
+    const contextResult = canvasElement.getContext('2d');
+
+    if (!contextResult) {
+      return;
+    }
+
+    const canvas: HTMLCanvasElement = canvasElement;
+    const context: CanvasRenderingContext2D = contextResult;
 
     const reducedMotionQuery = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
@@ -88,7 +90,9 @@ const context = canvas.getContext('2d');
       canvas.style.height = `${canvasHeight}px`;
 
       context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-      context.font = `700 ${fontSize}px SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
+      context.font =
+        `700 ${fontSize}px ` +
+        'SFMono-Regular, Menlo, Monaco, Consolas, monospace';
       context.textBaseline = 'top';
 
       const columnCount = Math.ceil(canvasWidth / fontSize);
