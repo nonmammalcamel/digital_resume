@@ -3,7 +3,8 @@ type ExperienceItem = {
   role: string;
   organization: string;
   dates: string;
-  details: readonly string[];
+  description: string;
+  appliedSkills: string;
 };
 
 type ExperienceSectionProps = {
@@ -11,20 +12,10 @@ type ExperienceSectionProps = {
   items: readonly ExperienceItem[];
 };
 
-function renderExperienceDetail(detail: string) {
-  const emphasizedTerms = /(Cat Chaser|Highlander)/g;
-  const parts = detail.split(emphasizedTerms);
-
-  return parts.map((part, index) => {
-    if (part === 'Cat Chaser' || part === 'Highlander') {
-      return <strong key={`${part}-${index}`}>{part}</strong>;
-    }
-
-    return part;
-  });
-}
-
-export function ExperienceSection({ title, items }: ExperienceSectionProps) {
+export function ExperienceSection({
+  title,
+  items
+}: ExperienceSectionProps) {
   return (
     <section
       id="experience"
@@ -46,18 +37,25 @@ export function ExperienceSection({ title, items }: ExperienceSectionProps) {
                   <h3 className="experience-role">{item.role}</h3>
 
                   {item.organization ? (
-                    <p className="experience-organization">{item.organization}</p>
+                    <p className="experience-organization">
+                      {item.organization}
+                    </p>
                   ) : null}
                 </div>
 
                 <p className="experience-dates">{item.dates}</p>
               </div>
 
-              <ul className="experience-details">
-                {item.details.map((detail) => (
-                  <li key={detail}>{renderExperienceDetail(detail)}</li>
-                ))}
-              </ul>
+              <div className="experience-content">
+                <p className="experience-description">
+                  {item.description}
+                </p>
+
+                <p className="experience-applied-skills">
+                  <strong>Applied Skills:</strong>{' '}
+                  {item.appliedSkills}
+                </p>
+              </div>
             </article>
           ))}
         </div>

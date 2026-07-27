@@ -46,49 +46,51 @@ export const siteContent = {
     'So, if you still want a boring normal resume, here you go. Otherwise, you can see the certifications I’ve earned and some work samples from my time at Cal State down below!'
   ]
 },
-  experience: {
-    title: 'Experience',
-    items: [
-      {
-        id: 'cinemarket',
-        role: 'Film Consultant & Technical Support',
-        organization: 'CineMarket, LLC',
-        dates: '2021 – Present',
-        details: [
-          'I provided legal perspective on several film contracts for CineMarket’s consultation business—most notably reviewing IP rights for Elmore Leonard’s Cat Chaser and right of transfer for the Highlander film franchise.',
-          'I rebuilt the accounting and project databases, making expense reporting much faster and creating cloud-accessible systems for scripts, notes, and IP contract tracking.'
-        ]
-      },
-      {
-        id: 'american-soil-stone',
-        role: 'Domestic Purchasing & Logistics Manager',
-        organization: 'American Soil & Stone',
-        dates: '2014 – 2017',
-        details: [
-          'I started as a sales associate and was later promoted to domestic purchasing manager, eventually also becoming the point of contact for the large-scale stone fabrication department.',
-          'I was the company’s primary internal partner while developing a new PoS system, during which I completed the first full inventory check in over a decade—tracking thousands of cubic yards of soil, gravel, and mulch, as well as several thousand tons of flagstone and boulders.'
-        ]
-      },
-      {
-        id: 'kirby-cabinetry',
-        role: 'Custom Cabinet Designer & Fabricator',
-        organization: 'Kirby Cabinetry',
-        dates: '2017 – 2020, 2021 – 2023',
-        details: [
-          'I helped carry roughly 25 high-end custom cabinetry projects from early design conversations through fabrication and final assembly.'
-        ]
-      },
-      {
-        id: 'film-media-composer',
-        role: 'Film & Media Composer',
-        organization: '',
-        dates: '2016 – 2024',
-        details: [
-          'Across one feature film, seven short films, three podcasts, and two videogames, I composed and recorded original music, always aiming to serve each creator’s vision rather than imposing my own.'
-        ]
-      }
-    ]
-  },
+experience: {
+  title: 'Experience',
+  items: [
+    {
+      id: 'cinemarket',
+      role: 'Film Consultant & Technical Support',
+      organization: 'CineMarket, LLC',
+      dates: '2021 – Present',
+      description:
+        'At CineMarket, I supported film-development projects by collecting, organizing, and reviewing contracts, copyright records, transfer documents, correspondence, and other rights materials. My work included identifying gaps and inconsistencies in chain-of-title documentation, coordinating research and information requests, and building cloud-based systems for tracking contracts, scripts, project notes, and financial information across multiple active projects.',
+      appliedSkills:
+        'Rights research, document organization, issue identification, database development, systems administration, and stakeholder support.'
+    },
+    {
+      id: 'american-soil-stone',
+      role: 'Domestic Purchasing & Logistics Manager',
+      organization: 'American Soil & Stone',
+      dates: '2014 – 2017',
+      description:
+        'At American Soil & Stone, I advanced from sales associate to domestic purchasing and logistics manager, serving as a central point of coordination among customers, suppliers, internal teams, and fabrication partners. I managed purchasing records, order status, scheduling, vendor communications, and issue resolution, led the company’s first inventory audit in more than a decade, and contributed to the implementation of a new point-of-sale system.',
+      appliedSkills:
+        'Vendor coordination, purchasing operations, records accuracy, inventory auditing, systems implementation, and operational problem-solving.'
+    },
+    {
+      id: 'kirby-cabinetry',
+      role: 'Custom Cabinet Designer & Fabricator',
+      organization: 'Kirby Cabinetry',
+      dates: '2017 – 2020, 2021 – 2023',
+      description:
+        'Through Kirby Cabinetry, I managed approximately 25 custom projects from initial client discussions and project scoping through design, purchasing, fabrication, scheduling, installation, and final approval. Each engagement required careful documentation, coordination with vendors and clients, management of changing requirements, technical problem-solving, and accountability for delivering a finished result.',
+      appliedSkills:
+        'Project scoping, workflow management, purchasing, client communication, vendor coordination, technical problem-solving, and end-to-end accountability.'
+    },
+    {
+      id: 'film-media-composer',
+      role: 'Film & Media Composer',
+      organization: '',
+      dates: '2016 – 2024',
+      description:
+        'As a freelance music supervisor and composer, I managed music-clearance workflows from initial rights-holder research through licensing discussions and execution. I maintained records of negotiations, ownership information, approvals, cue sheets, deliverables, and unresolved clearance issues while coordinating with publishers, producers, rights holders, and creative teams across concurrent productions.',
+      appliedSkills:
+        'Rights clearance, contract tracking, records management, deadline coordination, stakeholder communication, and issue resolution.'
+    }
+  ]
+},
   certifications: {
     title: 'Certifications',
     intro:
