@@ -4,11 +4,7 @@ type AboutSectionProps = {
 };
 
 const aboutLinks = {
-  'ask them': {
-    href: '#references',
-    openInNewTab: false
-  },
-  'here you go': {
+  here: {
     href: '/kirby-resume.pdf',
     openInNewTab: true
   }
@@ -17,7 +13,7 @@ const aboutLinks = {
 type AboutLinkPhrase = keyof typeof aboutLinks;
 
 function renderLinkedText(text: string) {
-  const parts = text.split(/(ask them|here you go)/gi);
+  const parts = text.split(/(\bhere\b)/gi);
 
   return parts.map((part, index) => {
     const normalizedPart = part.toLowerCase() as AboutLinkPhrase;
@@ -69,7 +65,10 @@ function renderNumberedParagraph(paragraph: string) {
   );
 }
 
-export function AboutSection({ title, paragraphs }: AboutSectionProps) {
+export function AboutSection({
+  title,
+  paragraphs
+}: AboutSectionProps) {
   return (
     <section
       id="about"
@@ -86,11 +85,16 @@ export function AboutSection({ title, paragraphs }: AboutSectionProps) {
         <div className="section-copy about-copy">
           {paragraphs.map((paragraph, index) => {
             const isNumberedParagraph =
-              paragraph.startsWith('1. ') || paragraph.startsWith('2. ');
+              paragraph.startsWith('1. ') ||
+              paragraph.startsWith('2. ');
 
             return (
               <p
-                className={isNumberedParagraph ? 'about-numbered' : undefined}
+                className={
+                  isNumberedParagraph
+                    ? 'about-numbered'
+                    : undefined
+                }
                 key={`${paragraph}-${index}`}
               >
                 {isNumberedParagraph

@@ -40,7 +40,7 @@ export const siteContent = {
     'I recently completed the paralegal certificate program at Cal State LA and moved back to my hometown of Berkeley to begin building a career in paralegal work, eDiscovery, and legal technology.',
     'I created this site because a traditional resume can list where someone has worked, but it does not always explain how that experience fits together. My background is unconventional, but it has consistently required careful documentation, research, technical troubleshooting, client communication, project ownership, and the organization of complex information.',
     'Although I have not yet worked in a law firm, those experiences gave me many of the habits that drew me to legal support work. My paralegal education and legal-technology training have allowed me to apply those strengths more directly to legal research, writing, document preparation, discovery, and information management.',
-    'This site provides the fuller picture: my experience, credentials, education, and selected work from the Cal State LA paralegal program.'
+    'This site provides the fuller picture: my experience, credentials, education, and selected work from the Cal State LA paralegal program. If you would like to see my traditional resume, you can find it here.'
   ]
 },
 experience: {
