@@ -1,7 +1,7 @@
 export const siteContent = {
   identity: {
     name: 'Travis Kirby',
-    role: 'Litigation Paralegal / eDiscovery / Legal Tech '
+    role: 'Paralegal / eDiscovery / Legal Tech '
   },
   navigation: [
     {
@@ -37,13 +37,10 @@ export const siteContent = {
   title: 'About Me',
   paragraphs: [
     'Welcome to my digital resume! I’m Travis.',
-    'I recently completed my paralegal certification at Cal State LA before immediately packing up and transplanting myself back to my hometown of Berkeley this July.',
-    'Once I began my job hunt in the Bay, I quickly decided I would build this website for two reasons:',
-    '1. I don’t think the dominant culture of LinkedIn and Indeed.com are conducive to displaying anybody’s real abilities or personality; and…',
-    '2. That same culture only lets HR evaluate candidates by keywords and longevity—not talent or ambition.',
-    'I excelled in the paralegal program because I had the opportunity for face-to-face interaction with my professors and fellow students—you can ask them about it! They came to know that I would thrive in the paralegal world because of who I am, not because they read a bullet list of work experience.',
-    'Because, while I haven’t worked at a law firm yet, I have spent years doing work that required careful documentation, technical troubleshooting, client communication, research, and managing large volumes of data. These are the skills that drew me to legal and legal tech worlds, and I’ve pursued training in these areas because that’s exactly where I’m aiming my career.',
-    'So, if you still want a boring normal resume, here you go. Otherwise, you can see the certifications I’ve earned and some work samples from my time at Cal State down below!'
+    'I recently completed the paralegal certificate program at Cal State LA and moved back to my hometown of Berkeley to begin building a career in paralegal work, eDiscovery, and legal technology.',
+    'I created this site because a traditional resume can list where someone has worked, but it does not always explain how that experience fits together. My background is unconventional, but it has consistently required careful documentation, research, technical troubleshooting, client communication, project ownership, and the organization of complex information.',
+    'Although I have not yet worked in a law firm, those experiences gave me many of the habits that drew me to legal support work. My paralegal education and legal-technology training have allowed me to apply those strengths more directly to legal research, writing, document preparation, discovery, and information management.',
+    'This site provides the fuller picture: my experience, credentials, education, and selected work from the Cal State LA paralegal program.'
   ]
 },
 experience: {
@@ -51,23 +48,23 @@ experience: {
   items: [
     {
       id: 'cinemarket',
-      role: 'Film Consultant & Technical Support',
+      role: 'Film Consultant & Legal Research Support',
       organization: 'CineMarket, LLC',
-      dates: '2021 – Present',
+      dates: '2021 – 2026',
       description:
         'At CineMarket, I supported film-development projects by collecting, organizing, and reviewing contracts, copyright records, transfer documents, correspondence, and other rights materials. My work included identifying gaps and inconsistencies in chain-of-title documentation, coordinating research and information requests, and building cloud-based systems for tracking contracts, scripts, project notes, and financial information across multiple active projects.',
       appliedSkills:
         'Rights research, document organization, issue identification, database development, systems administration, and stakeholder support.'
     },
     {
-      id: 'american-soil-stone',
-      role: 'Domestic Purchasing & Logistics Manager',
-      organization: 'American Soil & Stone',
-      dates: '2014 – 2017',
+      id: 'film-media-composer',
+      role: 'Music Supervisor & Media Composer',
+      organization: '',
+      dates: '2016 – 2024',
       description:
-        'At American Soil & Stone, I advanced from sales associate to domestic purchasing and logistics manager, serving as a central point of coordination among customers, suppliers, internal teams, and fabrication partners. I managed purchasing records, order status, scheduling, vendor communications, and issue resolution, led the company’s first inventory audit in more than a decade, and contributed to the implementation of a new point-of-sale system.',
+        'As a freelance music supervisor and composer, I managed music-clearance workflows from initial rights-holder research through licensing discussions and execution. I maintained records of negotiations, ownership information, approvals, cue sheets, deliverables, and unresolved clearance issues while coordinating with publishers, producers, rights holders, and creative teams across concurrent productions.',
       appliedSkills:
-        'Vendor coordination, purchasing operations, records accuracy, inventory auditing, systems implementation, and operational problem-solving.'
+        'Rights clearance, contract tracking, records management, deadline coordination, stakeholder communication, and issue resolution.'
     },
     {
       id: 'kirby-cabinetry',
@@ -80,14 +77,14 @@ experience: {
         'Project scoping, workflow management, purchasing, client communication, vendor coordination, technical problem-solving, and end-to-end accountability.'
     },
     {
-      id: 'film-media-composer',
-      role: 'Film & Media Composer',
-      organization: '',
-      dates: '2016 – 2024',
+      id: 'american-soil-stone',
+      role: 'Domestic Purchasing & Logistics Manager',
+      organization: 'American Soil & Stone',
+      dates: '2014 – 2017',
       description:
-        'As a freelance music supervisor and composer, I managed music-clearance workflows from initial rights-holder research through licensing discussions and execution. I maintained records of negotiations, ownership information, approvals, cue sheets, deliverables, and unresolved clearance issues while coordinating with publishers, producers, rights holders, and creative teams across concurrent productions.',
+        'At American Soil & Stone, I advanced from sales associate to domestic purchasing and logistics manager, serving as a central point of coordination among customers, suppliers, internal teams, and fabrication partners. I managed purchasing records, order status, scheduling, vendor communications, and issue resolution, led the company’s first inventory audit in more than a decade, and contributed to the implementation of a new point-of-sale system.',
       appliedSkills:
-        'Rights clearance, contract tracking, records management, deadline coordination, stakeholder communication, and issue resolution.'
+        'Vendor coordination, purchasing operations, records accuracy, inventory auditing, systems implementation, and operational problem-solving.'
     }
   ]
 },
